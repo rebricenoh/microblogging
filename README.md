@@ -23,10 +23,10 @@ Una aplicación de microblogging simplificada en Golang, donde los usuarios pued
     ```
 * Clonar este repositorio:
 
-```bash
-https://github.com/rebricenoh/microblogging.git
-cd microblogging
-```
+    ```bash
+    https://github.com/rebricenoh/microblogging.git
+    cd microblogging
+    ```
 ## Estructura del proyecto
 
 La estructura del proyecto sigue una arquitectura hexagonal, manteniendo las responsabilidades de dominio, repositorio y servicios desacopladas:
@@ -66,23 +66,23 @@ La aplicación estará disponible en http://localhost:8080
 
 * Endpoint: `POST /tweet`
 * Body de la petición:
-```json
-{
-  "user_id": 1,
-  "content": "Este es un tweet de ejemplo"
-}
-```
+    ```json
+    {
+    "user_id": 1,
+    "content": "Este es un tweet de ejemplo"
+    }
+    ```
 
 #### Seguir a un usuario
 
 * Endpoint: `POST /follow`
 * Body de la petición:
-```json
-{
-  "follower_id": 1,
-  "followed_id": 2
-}
-```
+    ```json
+    {
+    "follower_id": 1,
+    "followed_id": 2
+    }
+    ```
 
 #### Ver el timeline
 
