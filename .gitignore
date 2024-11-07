@@ -1,0 +1,21 @@
+# Archivos de configuración de entorno
+.env
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Prueba binaria, construida con `go test -c`
+*.test
+
+# Salida de la herramienta de cobertura go, específicamente cuando se usa con LiteIDE
+*.out
+
+# Directorios de dependencia
+vendor/
+
+# Ir al archivo del espacio de trabajo
+go.work
