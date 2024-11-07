@@ -11,23 +11,19 @@ import (
 )
 
 // Config almacena la configuración de la aplicación.
-
 type Config struct {
 	DB *gorm.DB
 }
 
 // NewConfig crea una nueva configuración de la aplicación.
-
 func NewConfig() *Config {
 	// Cargar variables de entorno desde el archivo .env
-
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatalf("Error al cargar el archivo .env: %v", err)
 	}
 
 	// Obtener variables de entorno
-
 	dbUser := os.Getenv("DB_USER")
 	dbPassword := os.Getenv("DB_PASSWORD")
 	dbName := os.Getenv("DB_NAME")
@@ -35,7 +31,6 @@ func NewConfig() *Config {
 	dbPort := os.Getenv("DB_PORT")
 
 	// Configurar la conexión a PostgreSQL
-
 	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=disable",
 		dbHost, dbUser, dbPassword, dbName, dbPort)
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})

@@ -3,7 +3,6 @@ package domain
 import "time"
 
 // Tweet representa un mensaje corto publicado por un usuario.
-
 type Tweet struct {
 	ID        int       `gorm:"primaryKey"`
 	UserID    int       `gorm:"index;not null"` // índice para búsquedas rápidas

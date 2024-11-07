@@ -8,19 +8,16 @@ import (
 )
 
 // TweetHandler maneja las solicitudes HTTP para los tweets.
-
 type TweetHandler struct {
 	service *service.TweetService
 }
 
 // NewTweetHandler crea una nueva instancia de TweetHandler.
-
 func NewTweetHandler(service *service.TweetService) *TweetHandler {
 	return &TweetHandler{service: service}
 }
 
 // PostTweetHandler maneja la solicitud de publicación de un tweet.
-
 func (h *TweetHandler) PostTweetHandler(w http.ResponseWriter, r *http.Request) {
 	userID, _ := strconv.Atoi(r.Header.Get("User-ID"))
 	var req struct {

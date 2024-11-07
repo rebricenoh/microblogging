@@ -17,11 +17,9 @@ func main() {
 
 	// Crear repositorios
 	tweetRepo := repository.NewGormTweetRepository(cfg.DB)
-	//followRepo := repository.NewGormFollowRepository(cfg.DB)
 
 	// Crear servicios
 	tweetService := service.NewTweetService(tweetRepo)
-	//followService := service.NewFollowService(followRepo)
 
 	// Crear handlers
 	tweetHandler := handler.NewTweetHandler(tweetService)
